@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  laravel:
+    build: ./laravel
+    ports:
+      - "9000:9000"
+    depends_on:
+      - postgres
+    volumes:
+      - ./laravel:/var/www/html
+
+  vue:
+    build: ./vue
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./vue:/app
+
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: your_postgres_user
+      POSTGRES_PASSWORD: your_postgres_password
+      POSTGRES_DB: your_postgres_db
+    ports:
+      - "5432:5432"
