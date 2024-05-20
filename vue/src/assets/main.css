@@ -1,0 +1,32 @@
+@import './base.css';
+
+h1 {
+  text-align: center;
+  padding: 2rem;
+}
+.btn-wrapper {
+  text-align: center;
+}
+.btn {
+  border-radius: 7px;
+  background-color: green;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #fff;
+  display: inline-block;
+}
+
+.documents-wrapper {
+  margin-top: 2rem;
+}
+.documents-wrapper__list {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1.3rem;
+  border-bottom: 1px solid #eee;
+}
+
+.create-file-wrapper {
+  display: flex;
+  justify-content: center;
+}
